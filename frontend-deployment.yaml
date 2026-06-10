@@ -16,23 +16,14 @@ spec:
       labels:
         app: matrix-frontend
 
-
     spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
+
       containers:
       - name: frontend
-        image: finriustech/frontend:latest
+        image: finriustech/test-frontend:latest
         imagePullPolicy: Always
 
         ports:
         - containerPort: 3000
-
-        resources:
-          requests:
-            cpu: "100m"
-            memory: "128Mi"
-
-          limits:
-            cpu: "500m"
-            memory: "512Mi"
